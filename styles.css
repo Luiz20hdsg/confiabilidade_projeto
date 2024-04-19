@@ -1,0 +1,19 @@
+/* Estilos básicos para o mapa */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilos para tornar a interface responsiva */
+@media only screen and (max-width: 600px) {
+    /* Estilos específicos para telas menores (por exemplo, smartphones) */
+    #map {
+        height: 50vh; /* Reduz a altura do mapa para 50% da altura da tela */
+    }
+}

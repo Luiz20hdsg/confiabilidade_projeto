@@ -22,7 +22,6 @@ router.post('/icons', async (req, res) => {
   }
 });
 
-module.exports = router;
 
 
 // Rota para buscar todos os ícones
@@ -94,3 +93,4 @@ router.delete('/icons/:id', getIcon, async (req, res) => {
     }
   });
   
+  module.exports = router;

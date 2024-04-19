@@ -10,16 +10,42 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            position: relative; /* Necessário para posicionamento absoluto do campo de pesquisa */
         }
 
         #map {
-            height: 100%;
+            height: calc(100% - 50px); /* Altura do mapa (menos a altura da barra de pesquisa) */
             width: 100%;
+        }
+
+        /* Estilos para a área de pesquisa */
+        #search-area {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px; /* Altura da área de pesquisa */
+            background-color: #f0f0f0; /* Cor de fundo da área de pesquisa */
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+        }
+
+        /* Estilos para o campo de busca */
+        #search {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%; /* Largura do campo de busca */
+            max-width: 400px; /* Largura máxima do campo de busca */
         }
     </style>
 </head>
 <body>
     <div id="map"></div>
+
+    <div id="search-area">
+        <input type="text" id="search" placeholder="Pesquisar ícones...">
+    </div>
 
     <!-- Carregando a API do Google Maps -->
     <script src="https://cdn.jsdelivr.net/gh/somanchiu/Keyless-Google-Maps-API@v6.6/mapsJavaScriptAPI.js"></script>
